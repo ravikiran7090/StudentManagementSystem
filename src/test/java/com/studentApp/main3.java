@@ -54,7 +54,8 @@ public class main3 {
 			}
 		}
 		private static void exit() {
-			// TODO Auto-generated method stub
+			System.out.println("Good Bye");
+			System.exit(0);
 			
 		}
 		private static void printAllStudentData() {
@@ -70,8 +71,23 @@ public class main3 {
 			}
 		}
 		private static void findStudentById(Scanner scanner2) {
-			// TODO Auto-generated method stub
+			Student studentFound= null;
+			String studentId = scanner2.next();
+			try {
 			
+			studentFound = studentList.stream().filter(student -> student.getStudentId().equalsIgnoreCase(studentId)).findFirst()
+			.orElseThrow(()-> new RuntimeException("no Data found !!!"));
+			}
+			catch(RuntimeException e){
+				System.err.println("Student with ID "+studentId+" not found!!");
+			}
+		  
+			 if (studentFound != null) {
+		            System.out.println("Student Found:");
+		            studentFound.printStudentInfo();
+		        } else {
+		            System.err.println("Student with ID " + studentId + " not found!");
+		        }
 		}
 		private static void enrollStudent(Scanner scanner2) {
 		System.out.println("Enter the Student Name");
@@ -108,7 +124,7 @@ public class main3 {
 			 * 
 			 */
 			Collections.sort(studentList, studengtComparator);
-			System.out.println(studentList);
+			printAllStudentData();
 		}
 		
 		public static Student findStudentById(String studentId ) {
