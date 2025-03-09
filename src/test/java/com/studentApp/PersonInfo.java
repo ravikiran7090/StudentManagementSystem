@@ -14,7 +14,10 @@ public class PersonInfo {
 		personDetail3.displayInfo(); 
 		
 		
-		
+	  
+       
+      
+       
 		
 
 	}
