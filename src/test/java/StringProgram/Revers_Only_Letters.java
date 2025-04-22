@@ -3,7 +3,7 @@ package StringProgram;
 public class Revers_Only_Letters {
 
 	public static void main(String[] args) {
-		String s="1ab2yug777kdjv";
+		String s="ra2&h4l+";
 		char[] str = s.toCharArray();
 		int left=0;
 		int right=str.length-1;

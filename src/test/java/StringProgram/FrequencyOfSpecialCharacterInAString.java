@@ -1,6 +1,7 @@
 package StringProgram;
 
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 public class FrequencyOfSpecialCharacterInAString {
 
@@ -18,7 +19,8 @@ public class FrequencyOfSpecialCharacterInAString {
 				
 			}
 		}
-   System.out.println(frequencyMap);
+		for (Entry<Character, Integer> ch:frequencyMap.entrySet())
+		System.out.println(ch.getKey() +" "+ch.getValue());
 	}
 
 }
