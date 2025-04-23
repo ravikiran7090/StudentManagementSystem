@@ -12,15 +12,17 @@ public class ArrayAddition {
 	        int[][] arrays={a,b,c};
 	        int maxLength=0;
 	        for(int[] array:arrays){
-	            if(a.length>maxLength){
-	                maxLength=a.length;
+	            if(array.length>maxLength){
+	                maxLength=array.length;
 	            }
 	        }
 	        int[] result=new int[maxLength];
 	        for(int i=0; i<maxLength; i++){
 	            int sum=0;
 	            for(int[] array:arrays){
-	                sum+=a[i];
+	            	if(i<array.length) {
+	                sum+=array[i];
+	            	}
 	            }
 	            result[i]=sum;
 	        }
